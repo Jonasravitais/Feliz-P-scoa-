@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parabéns! Você ganhou!</title>
+    <style>
+        body {
+            background-color: #f4e1c1;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+            color: #4d2d19;
+            padding: 50px;
+        }
+        .container {
+            background-color: #d7b28f;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-top: 30px;
+        }
+        h1 {
+            font-size: 3em;
+            font-weight: bold;
+            color: #8a4b2b;
+            text-transform: uppercase;
+        }
+        .btn {
+            background-color: #8a4b2b;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            font-size: 1.5em;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #6b2d1c;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Feliz Páscoa, Cowboy!</h1>
+        <p>Você encontrou um QR Code premiado no estilo Velho Oeste! 🐣🎉</p>
+        <button class="btn" onclick="sorteio()">Clique para ver se ganhou!</button>
+        <p id="mensagem"></p>
+    </div>
+
+    <script>
+        function sorteio() {
+            let resultado = Math.random();
+            if (resultado > 0.5) {
+                document.getElementById("mensagem").innerHTML = "Parabéns, você ganhou um prêmio! Entre em contato para resgatar!";
+            } else {
+                document.getElementById("mensagem").innerHTML = "Infelizmente, hoje não foi seu dia. Tente novamente!";
+            }
+        }
+    </script>
+</body>
+</html>
